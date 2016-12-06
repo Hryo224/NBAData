@@ -10,7 +10,7 @@ methods = {
     "SCOREBOARD":{
         "function":"scoreboard",
         "endpoint":DATA_URL + "/%s/scoreboard.json",
-        "params":["date (format YYYYMMDD"]
+        "params":["date (format YYYYMMDD)"]
     },
 
     "TEAMS":{
@@ -61,7 +61,7 @@ methods = {
     "PREVIEW_ARTICLE":{
         "function":"preview_article",
         "endpoint": DATA_URL+"/%s/%s_preview_article.json",
-        "params":["date (format YYYYMMDD","gameId"]
+        "params":["date (format YYYYMMDD)","gameId"]
     },
     "TEAM_LEADERS":{
         "function":"team_leaders",
@@ -71,27 +71,27 @@ methods = {
     "RECAP_ARTICLE":{
         "function":"recap_article",
         "endpoint":DATA_URL+"/%s/%s_recap_article.json",
-        "params":["date (format YYYYMMDD", "gameId"]
+        "params":["date (format YYYYMMDD)", "gameId"]
     },
     "BOXSCORE":{
         "function":"boxscore",
         "endpoint":DATA_URL+"/%s/%s_boxscore.json",
-        "params":["date (format YYYYMMDD", "gameId"]
+        "params":["date (format YYYYMMDD)", "gameId"]
     },
     "PLAY_BY_PLAY":{
         "function":"play_by_play",
         "endpoint":DATA_URL+"/%s/%s_pbp_%s.json",
-        "params":["date (format YYYYMMDD", "gameId", "period"]
+        "params":["date (format YYYYMMDD)", "gameId", "period"]
     },
     "LEADTRACKER":{
         "function":"leadtracker",
         "endpoint":DATA_URL+"/%s/%s_lead_tracker_%s.json",
-        "params":["date (format YYYYMMDD", "gameId", "period"]
+        "params":["date (format YYYYMMDD)", "gameId", "period"]
     },
     "MINI_BOXSCORE":{
         "function":"mini_boxscore",
         "endpoint":DATA_URL+"/%s/%s_mini_boxscore.json",
-        "params":["date (format YYYYMMDD", "gameId"]
+        "params":["date (format YYYYMMDD)", "gameId"]
     },
     "PLAYER_GAME_LOG":{
         "function":"player_game_log",
