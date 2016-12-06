@@ -10,12 +10,16 @@ def get_data(url):
     data =  json.loads(r.read().decode(r.info().get_param('charset') or 'utf-8'))
     return data
 
-def call_function(function, param1="", param2=""):
+def nba_data(function, *args):
     func_obj = ""
     for key in m:
         if m.get(key).get('function') == function:
             func_obj = m.get(key)
+    if func_obj == "":
+        return "Function not supported"
     url = base + func_obj.get('endpoint')
-    if param1 != "":
-        url = url % param
+    if len(args) > 0:
+        url = url % tuple(args)
+    print(url)
     return get_data(url)
+

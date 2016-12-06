@@ -53,10 +53,26 @@ methods = {
     },
     "PREVIEW_ARTICLE":{
         "function":"preview_article",
-        "endpoint": DATA_URL+"/%s/{{gameId}}_preview_article.json"
+        "endpoint": DATA_URL+"/%s/%s_preview_article.json"
     },
     "TEAM_LEADERS":{
         "function":"team_leaders",
         "endpoint":DATA_URL+"/%s/teams/%s/leaders.json"
+    },
+    "RECAP_ARTICLE":{
+        "function":"recap_article",
+        "endpoint":DATA_URL+"/%s/%s_recap_article.json"
+    },
+    "BOXSCORE":{
+        "function":"boxscore",
+        "endpoint":DATA_URL+"/%s/%s_boxscore.json"
+    },
+    "PLAY_BY_PLAY":{
+        "function":"play_by_play",
+        "endpoint":DATA_URL+"/%s/%s_pbp_%s.json"
+    },
+    "LEADTRACKER":{
+        "function":"leadtracker",
+        "endpoint":DATA_URL+"/%s/%s_lead_tracker_%s.json"
     }
 }
