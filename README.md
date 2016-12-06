@@ -20,3 +20,16 @@ for method in methods:
   params = nba.get_params(method)
   print(method + " has parameters " + ", ".join(map(str, params)))
 ```
+To use NBAData, simply call one function, nba_data, which takes in the function name and the function's given parameters:
+```python
+from nba import nba_data
+from pprint import pprint
+#Get the scoreboard for 12/05/2016
+scoreboard = nba_data("scoreboard", 20161205)
+for game in scoreboard.get('games'):
+  game_id = game.get('gameId')
+  #Get the recap for the games on 12/05/2016
+  recap = nba_data("recap_article", 20161205, game_id)
+  pprint(recap)
+  ```
+  
