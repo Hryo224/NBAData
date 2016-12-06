@@ -33,6 +33,5 @@ def nba_data(function, *args):
     url = base + func_obj.get('endpoint')
     if len(args) > 0:
         url = url % tuple(args)
-    print(url)
     return get_data(url)
 
