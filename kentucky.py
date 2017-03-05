@@ -16,14 +16,17 @@ def get_player_id_from_college(college):
 def get_player_stats(player_id):
     return nba_data("player_game_log", CURRENT_YEAR, player_id)
 
-if __name__ == "__main__":
+def get_kentucky_stat_lines():
     kentucky = get_player_id_from_college('Kentucky')
-    for each in kentucky:
-        stats = get_player_stats(each.get('personId'))
+    for player in kentucky:
+        stats = get_player_stats(player.get('personId'))
         for stat in stats.get('league').get('standard'):
-            string = each['firstName'] + " " + each['lastName'] + " had the following stats on " + stat['gameDateUTC']
+            stat_line = player['firstName'] + " " + player['lastName'] + " had the following stats on " + stat['gameDateUTC']
             points = stat['stats']['points']
             assists = stat['stats']['assists']
-            string += " " + points + " points, " + assists + " assists"
-            print(string)
+            rebounds = stat['stats']['totReb']
+            stat_line += " " + points + " points, " + assists + " assists" + "and " + rebounds + " rebounds"
+            print(stat_line)
 
+if __name__ == '__main__':
+    get_kentucky_stat_lines()
