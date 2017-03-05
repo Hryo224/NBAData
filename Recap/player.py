@@ -6,6 +6,9 @@ class Player:
         for key, value in kwargs.items():
             if value != "":
                 setattr(self, key, value)
+            else:
+                value = 0
+                setattr(self, key, value)
         self.player = self.get_player_name(self.personId)
         
     def get_player_name(self, player_id):

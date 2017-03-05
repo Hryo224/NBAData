@@ -24,10 +24,13 @@ def generate_summary_table(home, away):
     return table
 
 def generate_report(boxscore, home, away, article):
-    b.parse_boxscore(boxscore)
-    content = "<h1>" + home['team'] + " vs " + away['team'] + "</h1>"
+    content = "<html><head><link rel='stylesheet' type='text/css' href='style.css'></head>"
+    content += "<h1>" + home['team'] + " vs " + away['team'] + "</h1>"
     content += generate_summary_table(home, away)
+    content += b.generate_boxscore(home, boxscore)
+    content += b.generate_boxscore(away, boxscore)
     content += article
+    content += "</html>"
     return content
 
 def get_scoreboard(date):
@@ -52,6 +55,7 @@ def get_game_data(game, team):
         quarter_data.append(quarter.get('score'))
     game_data['quarters'] = quarter_data
     game_data['team'] = team_data.get('triCode')
+    game_data['teamId'] = team_data.get('teamId')
     game_data['duration'] = team_data.get('gameDuration')
     game_data['attendance'] = team_data.get('attendance')
     return game_data
@@ -63,6 +67,10 @@ def init(date):
         away = get_game_data(game, 'vTeam')
         article = get_article(game, date)
         report = generate_report(boxscore, home, away, article)
+        file_name = home['team'] + "vs" + away['team'] + date + ".html"
+        f = open(file_name, 'w')
+        f.write(report)
+        f.close()
 
 def get_yesterday_date():
     return (date.today() - timedelta(1)).strftime('%Y%m%d')
