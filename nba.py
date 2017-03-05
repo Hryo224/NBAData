@@ -1,4 +1,4 @@
-from methods import methods as m
+from data_methods import methods as m
 from constants import BASE_DATA_URL as base
 import json
 import urllib.request

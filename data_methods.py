@@ -100,7 +100,7 @@ methods = {
     },
     "PLAYER_UBER_STATS":{
         "function":"player_uber_stats",
-        "endpoint":DATA_URL+"/%s/players/%_uber_stats.json",
+        "endpoint":DATA_URL+"/%s/players/%s_uber_stats.json",
         "params":["year", "playerId"]
     },
     "TEAM_SCHEDULE":{
