@@ -15,4 +15,5 @@ class Player:
         for each in players:
             if each['personId'] == player_id:
                 return each['firstName'] + " " + each['lastName']
+        return "N/A"
 

@@ -24,9 +24,13 @@ mapping = OrderedDict([
 def parse_boxscore(team, boxscore):
     stats = boxscore.get('stats')
     table = "<h2>" + team['team'] + "</h2>"
+    count = 0
     for player in stats.get('activePlayers'):
         if team.get('teamId') == player.get('teamId'):
            p = Player(**player)
+           count += 1
+           if count == 6:
+               table += "<tr><th colspan=15><center>Bench</center></th></tr>"
            table += "<tr>"
            for key, value in mapping.items():
                if key == "Player":
@@ -40,7 +44,8 @@ def parse_boxscore(team, boxscore):
     return table
 
 def generate_boxscore(team_id, boxscore):
-    table = "<div class='datagrid'><table><tr>"
+    table = "<div class='datagrid'><table>"
+    table += "<tr><th colspan=15><center>Starters</center></th></tr>"
     for head in mapping.keys():
         table += "<th>" + head + "</th>"
     table += "</tr>"
