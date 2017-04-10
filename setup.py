@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'NBAData',
   packages = ['NBAData'], # this must be the same as the name above
-  version = '1.0',
+  version = '1.1',
   description = 'Wrapper for the data.nba.net API',
   author = 'Hampton Young',
   author_email = 'hryoung1994@gmail.com',
