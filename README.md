@@ -11,12 +11,12 @@ pip install NBAData
 
 Some examples:
 ```python
-import nba
+import NBAData
 #print the method list
-nba.print_method_list()
+NBAData.print_method_list()
 
 #get the list of all the methods
-methods = nba.get_method_list()
+methods = NBAData.get_method_list()
 
 #print all the parameters for each function
 for method in methods:
@@ -25,7 +25,7 @@ for method in methods:
 ```
 To use NBAData, simply call one function, nba_data, which takes in the function name and the function's given parameters:
 ```python
-from nba import nba_data
+from NBAData import nba_data
 from pprint import pprint
 #Get the scoreboard for 12/05/2016
 scoreboard = nba_data("scoreboard", 20161205)
