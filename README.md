@@ -9,8 +9,8 @@ In order to see the list of methods you can call the print_methods_list() functi
 To install simply do:
 pip install NBAData
 
-```
 To use NBAData, simply call one function, nba_data, which takes in the function name and the function's given parameters:
+
 ```python
 from NBAData import nba_data
 from pprint import pprint
