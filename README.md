@@ -6,6 +6,9 @@ NBAData provides a simple method that allows for the user to call the nba_data f
 
 In order to see the list of methods you can call the print_methods_list() function. You can also return a list of all the methods with get_method_list(). Additionally, there is a function to get all the parameters a given function. 
 
+To install simply do:
+pip install NBAData
+
 Some examples:
 ```python
 import nba
