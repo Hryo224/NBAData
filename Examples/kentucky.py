@@ -1,4 +1,4 @@
-from nba import nba_data
+from NBAData import nba_data
 from pprint import pprint
 CURRENT_YEAR = 2016
 

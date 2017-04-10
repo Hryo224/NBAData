@@ -1,5 +1,5 @@
-from data_methods import methods as m
-from constants import BASE_DATA_URL as base
+from NBAData.data_methods import methods as m
+from NBAData.constants import BASE_DATA_URL as base
 import json
 import urllib.request
 
