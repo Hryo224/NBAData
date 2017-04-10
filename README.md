@@ -9,19 +9,6 @@ In order to see the list of methods you can call the print_methods_list() functi
 To install simply do:
 pip install NBAData
 
-Some examples:
-```python
-import NBAData
-#print the method list
-NBAData.print_method_list()
-
-#get the list of all the methods
-methods = NBAData.get_method_list()
-
-#print all the parameters for each function
-for method in methods:
-  params = nba.get_params(method)
-  print(method + " has parameters " + ", ".join(map(str, params)))
 ```
 To use NBAData, simply call one function, nba_data, which takes in the function name and the function's given parameters:
 ```python
