@@ -1,4 +1,4 @@
-import nba
+import NBAData as nba
 import pprint
 
 def get_scoreboard(date):
